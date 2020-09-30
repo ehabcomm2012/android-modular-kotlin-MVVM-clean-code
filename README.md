@@ -1,2 +1,2 @@
 # android-MVVM-clean-code
-template for applying clean code 
+Android Template for applying clean code with MVVM design pattern ,Dagger2-Hilt,Kotlin Coroutine,Retrofit,Junit unit test ,...
