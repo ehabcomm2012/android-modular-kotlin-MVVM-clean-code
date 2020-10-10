@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Android-MVVM-clean-code"
+rootProject.name = "Android-modular-kotlin-MVVM-clean-code"
