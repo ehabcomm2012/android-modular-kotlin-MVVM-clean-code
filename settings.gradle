@@ -1,5 +1,5 @@
 include ':commons'
 include ':features:popular_person_details'
-include ':features:popular_people_list'
+include ':features:popular_people'
 include ':app'
 rootProject.name = "Android-modular-kotlin-MVVM-clean-code"
