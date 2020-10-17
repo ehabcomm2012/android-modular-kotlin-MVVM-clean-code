@@ -3,17 +3,16 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion rootProject.versions.compileSdkVersion
+    buildToolsVersion rootProject.versions.buildToolsVersion
 
     defaultConfig {
         applicationId "com.ehab.android_mvvm_clean_code"
-        minSdkVersion 16
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        minSdkVersion rootProject.versions.minSdkVersions
+        targetSdkVersion rootProject.versions.targetSdkVersion
+        versionCode rootProject.versions.versionCode
+        versionName rootProject.versions.versionName
+        testInstrumentationRunner rootProject.testInstrumentationRunner
     }
 
     buildTypes {
@@ -27,9 +26,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation rootProject.libraries.kotlinStdLib
+    implementation rootProject.libraries.coreKTX
+    implementation rootProject.libraries.legacySupport
     implementation project(path: ':features:popular_people')
 
 
