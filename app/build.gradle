@@ -21,6 +21,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = rootProject.versions.jvmTarget
+    }
     dynamicFeatures = [':features:popular_person_details']
 }
 
@@ -28,7 +35,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation rootProject.libraries.kotlinStdLib
     implementation rootProject.libraries.coreKTX
-    implementation rootProject.libraries.legacySupport
+    implementation rootProject.libraries.appcompat
     implementation project(path: ':features:popular_people')
 
 

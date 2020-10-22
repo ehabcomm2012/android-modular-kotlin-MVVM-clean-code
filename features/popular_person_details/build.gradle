@@ -13,6 +13,13 @@ android {
         versionName rootProject.versions.versionName
         testInstrumentationRunner rootProject.testInstrumentationRunner
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = rootProject.versions.jvmTarget
+    }
 
 }
 
@@ -23,8 +30,6 @@ dependencies {
     implementation rootProject.libraries.kotlinStdLib
     implementation project(path: ':commons')
     androidTestImplementation rootProject.libraries.annotation
-
-
     implementation rootProject.libraries.kotlinCoroutines
     implementation rootProject.libraries.constraintlayout
     testImplementation rootProject.libraries.junit
