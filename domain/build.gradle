@@ -1,18 +1,19 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
 
 android {
     compileSdkVersion rootProject.versions.compileSdkVersion
     buildToolsVersion rootProject.versions.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.ehab.android_mvvm_clean_code"
         minSdkVersion rootProject.versions.minSdkVersion
         targetSdkVersion rootProject.versions.targetSdkVersion
         versionCode rootProject.versions.versionCode
         versionName rootProject.versions.versionName
         testInstrumentationRunner rootProject.testInstrumentationRunner
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -21,15 +22,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    dynamicFeatures = [':features:popular_person_details']
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = rootProject.versions.jvmTarget
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation rootProject.libraries.kotlinCoroutines
+    implementation rootProject.libraries.appcompat
     implementation rootProject.libraries.kotlinStdLib
     implementation rootProject.libraries.coreKTX
-    implementation rootProject.libraries.legacySupport
-    implementation project(path: ':features:popular_people')
-
-
+    //implementation rootProject.libraries.legacySupport
 }

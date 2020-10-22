@@ -1,3 +1,4 @@
+include ':domain'
 include ':commons'
 include ':features:popular_person_details'
 include ':features:popular_people'
