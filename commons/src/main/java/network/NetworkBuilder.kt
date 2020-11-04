@@ -11,8 +11,9 @@ object NetworkBuilder {
 
         return retrofit?:run {
            retrofit = Retrofit.Builder()
-                .baseUrl(AppConstants.baseApiUrl)
-                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(AppConstants.BASE_API_URL)
+                 //.client(OKHttpBuilder.getDefaultHttpLogClient())
+               .addConverterFactory(GsonConverterFactory.create())
                 .build()
             retrofit
         }

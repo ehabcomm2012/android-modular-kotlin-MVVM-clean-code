@@ -35,6 +35,6 @@ dependencies {
     implementation rootProject.libraries.appcompat
     implementation rootProject.libraries.kotlinStdLib
     implementation rootProject.libraries.coreKTX
-    implementation rootProject.libraries.retrofit
-    implementation rootProject.libraries.retrofit_converter_gson
+    api rootProject.libraries.retrofit
+    api rootProject.libraries.retrofit_converter_gson
 }

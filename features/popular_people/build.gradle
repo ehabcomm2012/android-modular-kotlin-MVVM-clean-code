@@ -34,11 +34,13 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     implementation rootProject.libraries.kotlinCoroutines
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.versions.lifecycleViewmodelVersion}"
     implementation rootProject.libraries.appcompat
     implementation rootProject.libraries.kotlinStdLib
     implementation rootProject.libraries.coreKTX
     implementation rootProject.libraries.constraintlayout
     implementation project(path: ':commons')
+    implementation project(path: ':domain')
     testImplementation rootProject.libraries.junit
     androidTestImplementation rootProject.libraries.ext_junit
     androidTestImplementation rootProject.libraries.espressoCore

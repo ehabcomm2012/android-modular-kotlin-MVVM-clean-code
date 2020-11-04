@@ -1,7 +1,10 @@
-package com.ehab.modular.popular_people_list.ui.popular_people_list
+package com.ehab.modular.popular_people_list.presentation.popular_people_list
 
 import com.ehab.modular.commons.base_ui.BaseFragment
 import com.ehab.modular.popular_people_list.R
+import com.ehab.modular.popular_people_list.data.popular_people_list.PopularPeopleListRepositoryImpl
+import com.ehab.modular.popular_people_list.data.popular_people_list.network.poular_people_list.retrofit.PopularPeopleListApiService
+import network.NetworkBuilder
 
 
 class PupularPeopleFragment : BaseFragment<PupularPeopleViewModel>() {
@@ -10,7 +13,9 @@ class PupularPeopleFragment : BaseFragment<PupularPeopleViewModel>() {
     }
 
     override fun viewModelBuilder(): PupularPeopleViewModel {
-       return  PupularPeopleViewModel()
+       return  PupularPeopleViewModel(PopularPeopleListRepositoryImpl(NetworkBuilder.provideApiService(
+           PopularPeopleListApiService::class.java
+       )))
     }
 
     override fun getViewModelClass(): Class<PupularPeopleViewModel> {
