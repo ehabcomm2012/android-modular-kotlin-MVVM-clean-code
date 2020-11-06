@@ -9,7 +9,7 @@ import utils.AppConstants
 
 class PupularPeopleViewModel constructor(val popularPeopleListRepository : PopularPeopleListRepository) : BaseViewModel(){
 init {
-    getPopularPeopleList()
+    //getPopularPeopleList()
 }
     fun getPopularPeopleList(){
         viewModelScope.launch {

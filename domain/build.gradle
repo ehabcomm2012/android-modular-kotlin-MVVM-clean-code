@@ -34,7 +34,7 @@ android {
 
 dependencies {
 
-    implementation rootProject.libraries.kotlinCoroutines
+    implementation rootProject.libraries.kotlinCoroutinesAndroid
     implementation rootProject.libraries.appcompat
     implementation rootProject.libraries.kotlinStdLib
     implementation rootProject.libraries.coreKTX

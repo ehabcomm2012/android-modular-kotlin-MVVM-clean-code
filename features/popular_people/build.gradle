@@ -33,7 +33,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    implementation rootProject.libraries.kotlinCoroutines
+    implementation rootProject.libraries.kotlinCoroutinesAndroid
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.versions.lifecycleViewmodelVersion}"
     implementation rootProject.libraries.appcompat
     implementation rootProject.libraries.kotlinStdLib

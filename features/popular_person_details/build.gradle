@@ -28,10 +28,11 @@ dependencies {
     implementation project(":app")
     implementation rootProject.libraries.coreKTX
     implementation rootProject.libraries.kotlinStdLib
+    implementation rootProject.libraries.appcompat
     implementation project(path: ':commons')
     implementation project(path: ':domain')
     androidTestImplementation rootProject.libraries.annotation
-    implementation rootProject.libraries.kotlinCoroutines
+    implementation rootProject.libraries.kotlinCoroutinesAndroid
     implementation rootProject.libraries.constraintlayout
     testImplementation rootProject.libraries.junit
     androidTestImplementation rootProject.libraries.ext_junit
