@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ehab.modular.popular_people_list">
+
     <application >
-    <activity android:name=".presentation.popular_people_list.PupularPeopleActivity">
+    <activity android:name=".presentation.popular_people_list.PupularPeopleListActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

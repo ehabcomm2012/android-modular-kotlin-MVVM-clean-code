@@ -4,8 +4,8 @@ import com.ehab.modular.commons.base_ui.BaseActivity
 import com.ehab.modular.commons.base_ui.BaseFragment
 
 
-class PupularPeopleActivity : BaseActivity() {
+class PupularPeopleListActivity : BaseActivity() {
     override fun fragment(): BaseFragment<*> {
-       return PupularPeopleFragment()
+       return PupularPeopleListFragment()
     }
 }

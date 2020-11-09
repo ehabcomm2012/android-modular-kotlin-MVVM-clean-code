@@ -63,7 +63,8 @@ ext {
             espressoCore : "androidx.test.espresso:espresso-core:${versions.espressoCoreVersion}",
             annotation : "androidx.annotation:annotation:${versions.annotationVersion}",
             retrofit:"com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
-            retrofit_converter_gson :"com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}"        
+            retrofit_converter_gson :"com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}"
+
     ]
 
 }

@@ -14,4 +14,7 @@ class PopularPeopleListResponse (
 
     @SerializedName("results")
      var results: List<PopularPerson>?=null
-)
+){
+
+
+}

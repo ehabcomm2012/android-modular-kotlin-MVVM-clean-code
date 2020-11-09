@@ -5,9 +5,9 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface PopularPeopleListApiService {
-    @GET("/person/popular")
+interface PopularPeopleListRetrofitApi {
+    @GET("person/popular")
     public suspend fun getPopularPeopleList(@Query("api_key") apiKey :String,
                                      @Query("language") language: String ,
-                                     @Query("page") page:Int): Call<PopularPeopleListResponse>
+                                     @Query("page") page:Int): PopularPeopleListResponse
 }
